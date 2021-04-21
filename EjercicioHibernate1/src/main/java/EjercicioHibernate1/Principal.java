@@ -25,9 +25,5 @@ import org.hibernate.SessionFactory;
 
 public class Principal {
 	private static Logger logger = LogManager.getLogger(Principal.class);
-	static SessionFactory sessionFactory;
-	public String  helloService(String msg){
-		return "Hello "+ msg;
-	}
-
+	
 }

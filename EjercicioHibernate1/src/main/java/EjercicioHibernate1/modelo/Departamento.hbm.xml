@@ -14,7 +14,7 @@
 			<column name="nombre" />
 		</property>
 		<property generated="never" lazy="false" name="codResponsable"
-			type="java.lang.String">
+			type="java.lang.Integer">
 			<column name="cod_responsable" />
 		</property>
 	</class>

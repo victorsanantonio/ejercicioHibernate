@@ -1,6 +1,9 @@
 package EjercicioHibernate1.modelo;
 
-public class Empleado {
+import java.io.Serializable;
+
+public class Empleado implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int codigo;
 	private String nombre;
 	private String apellido1;

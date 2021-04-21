@@ -3,42 +3,33 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 25-jun-2020 19:16:14 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-	<class name="EjercicioHibernate1.modelo.xmlmapping.Provider"
-		table="Departamento">
-		<id name="codigo" type="int">
-			<column name="codigo" />
-		</id>
-		<property generated="never" lazy="false" name="apellido1"
-			type="java.lang.String">
-			<column name="apellido1" />
-		</property>
-		<property generated="never" lazy="false" name="apellido2"
-			type="java.lang.String">
-			<column name="apellido2" />
-		</property>
-		<property generated="never" lazy="false"
-			name="lugarNacimiento" type="java.lang.String">
-			<column name="lugar_nacimiento" />
-		</property>
-		<property generated="never" lazy="false"
-			name="fechaNacimiento" type="java.lang.String">
-			<column name="fecha_nacimiento" />
-		</property>
-		<property generated="never" lazy="false" name="direccion"
-			type="java.lang.String">
-			<column name="direccion" />
-		</property>
-		<property generated="never" lazy="false" name="telefono"
-			type="java.lang.String">
-			<column name="telefono" />
-		</property>
-		<property generated="never" lazy="false" name="puesto"
-			type="java.lang.String">
-			<column name="puesto" />
-		</property>
-		<property generated="never" lazy="false"
-			name="codDepartamento" type="java.lang.Integer">
-			<column name="cod_departamento" />
-		</property>
-	</class>
+ <class name="EjercicioHibernate1.modelo.Empleado" table="empleado">
+  <id name="codigo" type="int">
+   <column name="codigo"/>
+  </id>
+  <property generated="never" lazy="false" name="apellido1" type="java.lang.String">
+   <column name="apellido1"/>
+  </property>
+  <property generated="never" lazy="false" name="apellido2" type="java.lang.String">
+   <column name="apellido2"/>
+  </property>
+  <property generated="never" lazy="false" name="lugarNacimiento" type="java.lang.String">
+   <column name="lugar_nacimiento"/>
+  </property>
+  <property generated="never" lazy="false" name="fechaNacimiento" type="java.lang.String">
+   <column name="fecha_nacimiento"/>
+  </property>
+  <property generated="never" lazy="false" name="direccion" type="java.lang.String">
+   <column name="direccion"/>
+  </property>
+  <property generated="never" lazy="false" name="telefono" type="java.lang.String">
+   <column name="telefono"/>
+  </property>
+  <property generated="never" lazy="false" name="puesto" type="java.lang.String">
+   <column name="puesto"/>
+  </property>
+  <property generated="never" lazy="false" name="codDepartamento" type="java.lang.Integer">
+   <column name="cod_departamento"/>
+  </property>
+ </class>
 </hibernate-mapping>

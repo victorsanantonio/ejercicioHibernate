@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import EjercicioHibernate1.controlador.Consultar;
+import EjercicioHibernate1.vista.Menu;
 
 
 public class Principal {
@@ -13,10 +14,9 @@ public class Principal {
 	public static void main(String[] args) {
 		ClassLoader loader = Thread.currentThread().getContextClassLoader();
 		String url = "C:\\Users\\Formacion\\Desktop\\HibernateEjercicio1\\EjercicioHibernate1\\src\\main\\java\\log4j.properties";
-		System.out.println(url);
 		PropertyConfigurator.configure(url);
 		
-		Consultar consultar = new Consultar();
-		System.out.println(consultar.obtenerEmpleado(1));
+		Menu menu = new Menu();
+		menu.controlMenu();
 	}
 }

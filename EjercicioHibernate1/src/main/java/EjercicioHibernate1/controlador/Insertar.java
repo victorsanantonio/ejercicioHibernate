@@ -32,12 +32,14 @@ public class Insertar {
 	public void guardarEmpleado(Empleado empleado) {
 		iniciaOperacion();
 		session.save(empleado);
+		logger.info("Empleado guardado. ID: "+empleado.getCodigo());
 		terminaOperacion();
 	}
 	
 	public void guardarDepartamento(Departamento departamento) {
 		iniciaOperacion();
 		session.save(departamento);
+		logger.info("Departamento guardado. ID: "+departamento.getCodigo());
 		terminaOperacion();
 	}
 }

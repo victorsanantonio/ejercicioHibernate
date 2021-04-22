@@ -15,8 +15,6 @@ public class Insertar {
 	private Session session;
 
 	private void iniciaOperacion() {
-		// SessionFactory sessionFactory = new
-		// AnnotationConfiguration().configure().buildSessionFactory();
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		session = sessionFactory.openSession();
 		session.getTransaction().begin();

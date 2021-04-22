@@ -11,58 +11,40 @@ import org.hibernate.cfg.Configuration;
 import EjercicioHibernate1.modelo.Departamento;
 import EjercicioHibernate1.modelo.Empleado;
 import EjercicioHibernate1.principal.Principal;
+import EjercicioHibernate1.vista.Menu;
 
 public class Consultar {
 	private static Logger logger = LogManager.getLogger(Principal.class);
 	private Session session;
 
-	private void iniciaOperacion() {
-		// SessionFactory sessionFactory = new
-		// AnnotationConfiguration().configure().buildSessionFactory();
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		session = sessionFactory.openSession();
-		session.getTransaction().begin();
-		logger.info("Consulta iniciada");
-	}
-
-	private void terminaOperacion() {
-		session.getTransaction().commit();
-		session.close();
-		logger.info("Consulta finalizada");
-	}
-
 	public Empleado obtenerEmpleado(int idEmpleado) {
 		Empleado empleado = null;
-		iniciaOperacion();
+		session = Menu.sessionFactory.openSession();
 		empleado = (Empleado) session.get(Empleado.class, idEmpleado);
 		logger.info("Empleado obtenido a partir del id: "+idEmpleado);
-		terminaOperacion();
 		return empleado;
 	}
 
 	public List<Empleado> listarEmpleados() {
 		List<Empleado> empleados = null;
-		iniciaOperacion();
+		session = Menu.sessionFactory.openSession();
 		empleados = session.createQuery("from Empleado").list();
 		logger.info("Empleados listados correctamente");
-		terminaOperacion();
 		return empleados;
 	}
 
 	public Departamento obtenerDepartamento(int idDepartamento) {
 		Departamento departamento = null;
-		iniciaOperacion();
+		session = Menu.sessionFactory.openSession();
 		departamento = (Departamento) session.get(Departamento.class, idDepartamento);
 		logger.info("Departamento obtenido a partir del id: "+idDepartamento);
-		terminaOperacion();
 		return departamento;
 	}
 
 	public List<Departamento> listarDepartamentos() {
 		List<Departamento> departamentos = null;
-		iniciaOperacion();
+		session = Menu.sessionFactory.openSession();
 		departamentos = session.createQuery("from Departamento").list();
-		terminaOperacion();
 		logger.info("Departamentos listados correctamente");
 		return departamentos;
 	}
